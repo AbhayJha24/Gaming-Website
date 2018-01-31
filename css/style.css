@@ -1,0 +1,91 @@
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: 0%; }
+}
+
+@-webkit-keyframes loadimg {
+33%{transform: translate(-25px,-25px) rotate(30rad);}
+66%{transform: translate(0px,-50px) rotate(60rad);}
+99%{transform: translate(17px,0px) rotate(90rad);}
+}
+
+@-webkit-keyframes loadpic {
+0%{opacity:0; transform:translate(50px, 0px);}
+100%{opacity:1; transform:translate(0px, 0px);}
+}
+
+@font-face{font-family:heading;src:url("../fonts/font.ttf");}
+@font-face{font-family:text; src:url("../fonts/small_font.ttf");}
+
+.mobnavtextholder{display:none;}
+#mobnavlinks{display:none;}
+.moblink{display:none;}
+.moblinkclose{display:none;}
+.navbar{display:block; width:100%; height:50px; background-color:#222222; border:1px solid #000000; position:fixed; left:0px; top:0px; margin-top:0px; overflow:hidden; padding-left:100px; z-index:100;}
+.navbuttons{display:inline-block; position:relative; background-color:#222222; border:1px solid #222222; min-width:80px; max-width:150; width:auto; max-height:33px; min-height:33px; text-align:center; vertical-align:middle; padding-top:15px; margin:0px; padding-left:10px; padding-right:10px;}
+.navbuttons:hover{background-color:#888888;}
+.active:hover{background-color:#888888;}
+.active{display:inline-block; background-color:#000000; border:1px solid #222222; min-width:80px; max-width:150; width:auto; max-height:33px; min-height:33px; text-align:center; vertical-align:middle; padding-top:15px; margin:0px; padding-left:10px; padding-right:10px;}
+a{text-decoration:none; cursor:default; color:#0000ff;}
+a.navlink{color:#ffffff;}
+a:active{color:#0000ff;}
+a.navlink:active{color:#ffffff;}
+a.navlink:visited{color:#ffffff;}
+a:visited{color:#0000ff;}
+h1{display:block; text-align:center; font-weight:900; color:#000000; font-size:72px; text-decoration:underline; font-family:heading; font-style:italic;}
+h2{display:block; text-align:center; font-weight:900; color:#000000; font-size:48px; text-decoration:underline; font-family:heading; font-style:italic;}
+h3{display:block; text-align:left; font-weight:900; color:#000000; font-size:36px; text-decoration:underline; font-family:heading; font-style:italic;}
+.holder{max-height:200px; min-height:200px; margin:auto; min-width:100%; padding-top:200px;}
+.mover{ margin:auto; background-color:#00ffcc; border:2px solid #000000; height:25px; width:25px; position:relative; -webkit-animation: loadimg 1s linear 1; -webkit-border-radius:5px;}
+body{padding-top:20px; overflow:scroll; font-family:text;}
+.imagediv{max-height:600px; min-height:600px; margin:auto; width:70%; display:none; -webkit-animation-name:somename; -webkit-animation-duration:1s; -webkit-animation-iteration-count:1; -webkit-animation-timing-function: linear; overflow:hidden;}
+.slider{position:relative; width:500%; -webkit-animation: 10s slidy infinite;}
+.img{display:block; margin:auto; height:540px; float:left; width:20%;}
+p{font-size:24px; margin-left:40px; margin-right:40px; text-align:left;}
+.paragraphlist{font-size:24px;}
+.underlinelist{text-decoration:underline;}
+.inlineimg{display:block; height:250px; width:300px; border:solid 1px #000000; margin:auto;}
+.inlineimgwithgreaterwidth{display:block; height:300px; width:400px; border:solid 1px #000000; margin:auto;}
+img.casualgamer{display:block; height:300px; width:500px; border:solid 1px #000000; margin:auto;}
+img.socialgamer{display:block; height:300px; width:500px; border:solid 1px #000000; margin:auto;}
+img.specialistgamer{display:block; height:300px; width:500px; border:solid 1px #000000; margin:auto;}
+img.expertgamer{display:block; height:300px; width:500px; border:solid 1px #000000; margin:auto;}
+img.eyedisorders{display:block; height:250px; width:500px; border:solid 1px #000000; margin:auto;}
+img.gamingaddiction{display:block; margin:auto; height:250px; width:500px; border:solid 1px #000000;}
+img.conclusionemoji{display:block; margin:auto; height:250px; width:250px; border:solid 1px #000000; float:left;}
+img.conclusion{display:block; float:left; height:250px; width:400px; border:solid 1px #000000; margin:auto;}
+table.il{border:2px solid #000000;}
+table{margin:auto;}
+td{border:2px solid #000000; text-align:center;}
+caption{font-size:24px; font-weight:900;}
+a.top{display:block; position:fixed; right:20px; bottom:10px; z-index:100; -webkit-border-radius:50%; background-color:#ff0000; padding:10px;}
+
+@media only screen and (max-width:1024px; min-width:900px){
+
+.img{width:20%;}
+}
+@media only screen and (max-width:880px) {
+
+.holder{margin:auto;}
+.img{max-width:20%; min-width:20%; max-height:500px; min-height:300px; height:auto;}
+img{max-width:75%; min-width:20%; max-height:500px; min-height:300px; height:auto; width:auto;}
+.active{display:none;}
+.navbuttons{display:none;}
+.moblink{display:inline-block;background-color:#ffffff; height:40px; width:40px; -webkit-border-radius:50%; background-image:url("../images/dropdown_icon.ico"); background-size: 40px 40px; float:right; margin-top:4px; margin-right:10px;}
+.moblinkclose{display:none;background-color:#000000; height:40px; width:40px; -webkit-border-radius:50%; background-image:url("../images/close_icon.ico"); background-size: 40px 40px; float:right; margin-top:4px; margin-right:20px;}
+.navbar{padding-left:0px;}
+.mobnavtextholder{display:inline-block; width:200px; height:50px; float:left; margin-left:10px; margin-top:0px; color:#ffffff; font-size:24px; text-align:center; background-color:#000000; padding-top:9px;}
+#mobnavlinks{display:none; width:100%; height:300px; background-color:#222222; border:1px solid #000000; position:fixed; left:0px; top:50px; margin-top:0px; overflow:hidden; z-index:100;}
+.mobnavbuttons{display:block; position:relative; background-color:#222222; border:1px solid #222222; width:100%; max-height:50px; min-height:50px; text-align:center; vertical-align:middle; margin:0px; font-size:36px;}
+.mobactive{display:block; background-color:#000000; border:1px solid #222222; width:100%; max-height:50px; min-height:50px; text-align:center; vertical-align:middle; margin:0px; font-size:36px;}
+.mobnavbuttons:hover{background-color:#888888;}
+.mobactive:hover{background-color:#888888;}
+td.nobordermob{border:none; text-align:center;}
+}
